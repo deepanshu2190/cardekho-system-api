@@ -1,0 +1,23 @@
+#%RAML 1.0
+baseUri: localhost:8011/car
+title: Sample API
+/brands:
+  get:
+    responses: 
+      '200':
+        description: Get All Car details
+        body: 
+          application/json: 
+            example: { "brandid": "", "brandname": "", "carname": "", "modelname": "", "price": "" }
+  post:
+    body: 
+      application/json:
+        example: { "brandid": "", "brandname": "", "carname": "", "modelname": "", "price": "" }
+    responses:
+     '200':
+       description: Insert Car Details
+       body:
+         application/json: 
+           example:
+             {"Status": "Added"}         
+     
